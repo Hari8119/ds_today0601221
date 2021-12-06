@@ -1,0 +1,13 @@
+Remove Duplicte Stage:
+1.It is processing satge.
+2.It will support 1 I/P and 1 O/P and there is NO Reject link.
+3.It is mainly used to delete the duplicate records based on your key column and the data should be in sorted order.
+4.It will delete the duplicates with one option called "Duplicates Retains=1.First [Defaults] 2.Last "
+     Duplicates retains from first or lsat
+	 Ex: NO          NO[Sort Data]     O/P{first]   O/P[Last]      
+	     10          10                 10   
+	     10          10
+		 20          10                                 10
+		 10          20                 20
+		 20          20                                 20
+		 30          30                 30              30
