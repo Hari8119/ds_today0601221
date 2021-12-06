@@ -1,0 +1,29 @@
+Sort Stage:
+1.It is a processing stage.
+2.it will support 1 I/P and 1 O/P and there is no reject link.
+3.To sort the data we need sort key column.
+4.We can delete the duplicates in Sort stage as well in options tab: Allow Duplicates = False {Default=True}.
+5.we can filter the data by enablingin options:  create key change column= yes  {Default: False} then you can connect the filter stage and we can 
+  write where clause condition.
+   B) We can find out the duplicates by enabling Create key change column = true. It will create new column with 'key change()'
+          Key change = 1 [Unique]
+		  Key change = 0 [Duplicate]
+		  Ex: Ex: NO          Key cahnge           
+	     10          10             1  
+	     10          10             0
+		 20          10             0                         
+		 10          20             1                
+		 20          20             0                    
+		 30          30             1 
+Q1) What is the difference b/w link sort and the sort stage?
+Ans: link sort and sort stage functionality wise it is same but where as in sort stage we have few more options compared to link sort.
+      sort
+      A) when we have volume of data is more we should use sort.
+	  B) We can handle Amount of memory to be used in sort default 20MB. 
+Q2) what is the difference b/w remove dupliacte stage and sort stage?
+Ans: In Duplicate stage we can reatin the duplicate data either first or last based on the  option:  Dupliactes retains = First(Default) or Last
+     In sort stage we can reatin the data from first we don't have option to retain from last.
+Q3) How many ways we can delete the duplicates?
+Ans: 1.Remove duplicate stage----> based on colun and duplicates retails is first or last 2. sort stage -->options--->Allow duplicates = False 3.link sort --> partition--->perform sort enable-->unique 4.Transformer stage 5.filter stage where cluase conditon with keychange 6. sequential file -->fileter
+-->unix command [sort -u] 7. DB ---> select distinct column name from table name
+
