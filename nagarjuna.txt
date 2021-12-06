@@ -1,0 +1,10 @@
+Copy Stage:
+1.It is a processing stage
+2.It will support 1 I/P and any number of O/P.
+3. It is having options as Force = False [Default]
+   If i try to change Force= True [ when i have 1 O/P link performance ]
+Functinlaties
+A.It is mainly used for to modify the name of the columns, to modify the datatype of the columns.
+B.We can delete the columns which are coming from the source.
+C.we can add the new columns as well with source columns.
+--------------------------------------------------------------
